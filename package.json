@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "meu site",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D3C0RU5/website.git"
+  },
+  "author": "D3c0ru5",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D3C0RU5/website/issues"
+  },
+  "homepage": "https://github.com/D3C0RU5/website#readme"
+}
