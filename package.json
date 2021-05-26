@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "meu site",
   "scripts": {
-    "start": "node server.js"
+
   },
   "dependencies": {
     "express": "^4.17.1"
   },
-  "main": "server.js",
+  "main": "public/server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/D3C0RU5/website.git"
