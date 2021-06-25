@@ -1,12 +1,16 @@
 module.exports = (req,res)=>{
     if(req.method === 'GET'){
         res.json([
-            {name: 'Carlos', age: 26},
-            {name: 'Taynara', age: 22}
+            {
+                name: 'Carlos', 
+                age: 26,
+                prifission: 'Developer',
+                nacionality: 'Brazil'
+            }
         ])
     }else{
         const {name,location} = req.body
 
-        res.send({status: "USerCreated",name,location})
+        res.send({status: "UserCreated",name,location})
     }
 }
