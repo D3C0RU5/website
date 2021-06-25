@@ -5,7 +5,8 @@ module.exports = (req,res)=>{
                 name: 'Carlos', 
                 age: 26,
                 prifission: 'Developer',
-                nacionality: 'Brazil'
+                nacionality: 'Brazil',
+                height:1.75
             }
         ])
     }else{
