@@ -1,0 +1,9 @@
+.selected {
+    outline: 2px solid #31a2ff !important;
+    outline-offset: 1px;
+    cursor: context-menu;
+}
+
+.selected[contentEditable="true"] {
+    cursor: text;
+}
