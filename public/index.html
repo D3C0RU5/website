@@ -1,54 +1,39 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Pedrada</title>
-    <style>
-        body {
-            background: #000;
-            color: #fff;
-            font-family: monospace;
-        }
-
-        .background {
-            height: 100vh;
-            width: 100vw;
-            background: url(img/wallpaper.jpg);
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: fixed;
-            display: inline-block;
-            z-index: -1;
-            filter: grayscale(1) brightness(0.6);
-        }
-    </style>
+    <link href="./css/interface.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
 <body>
-    <div style="text-align:center;">
-        <img width="80px" src="img/ghost.gif">
-        <br>
-        Hello world!
-
-        <h1>Pedrada DEV</h1>
-    </div>
-    <div style="text-align:center;">
-        <img src="img/giphy.gif" style="max-width:100%">
-    </div>
-    <br>
-    <div style="text-align:center;">
-        <form action="https://www.paypal.com/donate" method="post" target="_top">
-            <input type="hidden" name="hosted_button_id" value="K98HSF2YKKXSL">
-            <input type="image" src="https://www.paypalobjects.com/pt_BR/i/btn/btn_donate_SM.gif" border="0"
-                name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
-            <img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
-        </form>
-    </div>
-
-    <div class="background">
-
-    </div>
+    <nav>
+        <div class="brand">VeConvert</div>
+        <div class="options">
+            <span onclick="resizeFrame('mobile')"><i class="fas fa-mobile-alt"></i></span>
+            <span onclick="resizeFrame('tablet')"><i class="fas fa-tablet-alt"></i></span>
+            <span onclick="resizeFrame('desktop')"><i class="fas fa-desktop"></i></span>
+        </div>
+    </nav>
+    <layout>
+        <aside>
+            <div id="components">
+                <div class="item" ondragstart="drag(event)" draggable="true" data-type="3-col">
+                    Adicionar 3 colunas
+                </div>
+            </div>
+        </aside>
+        <main>
+            <iframe src="client.html" id="contextframe" frameborder="0">
+            </iframe>
+        </main>
+    </layout>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script src="./feed/components.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
