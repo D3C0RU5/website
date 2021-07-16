@@ -1,12 +1,16 @@
 {
-    "routes":[
+    "routes": [
         {
-            "src":"/",
+            "src": "/",
             "dest": "/public/index.html"
         },
         {
-            "src":"/users",
-            "methods":[
+            "src": "/drag",
+            "dest": "/public/drag/index.html"
+        },
+        {
+            "src": "/users",
+            "methods": [
                 "POST",
                 "GET"
             ],

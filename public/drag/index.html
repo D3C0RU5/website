@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./css/interface.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="brand">DragAndDropEditor</div>
+        <div class="options">
+            <span onclick="resizeFrame('mobile')"><i class="fas fa-mobile-alt"></i></span>
+            <span onclick="resizeFrame('tablet')"><i class="fas fa-tablet-alt"></i></span>
+            <span onclick="resizeFrame('desktop')"><i class="fas fa-desktop"></i></span>
+        </div>
+    </nav>
+    <layout>
+        <aside>
+            <div id="components">
+                <div class="item" ondragstart="drag(event)" draggable="true" data-type="3-col">
+                    Adicionar 3 colunas
+                </div>
+            </div>
+        </aside>
+        <main>
+            <iframe src="client.html" id="contextframe" frameborder="0">
+            </iframe>
+        </main>
+    </layout>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
+    <script src="./feed/components.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
