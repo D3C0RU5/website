@@ -31,7 +31,7 @@ const Nav: React.FC<Props> = ({ toggleTheme }) => {
           {menus.map((m, i) => (
             <MenuItem key={i}>{m}</MenuItem>
           ))}
-          <Button>Let&apos;s talk</Button>
+          <Button>Let&apos;s talk!</Button>
           <Switch
             onChange={toggleTheme}
             checked={title === 'dark'}
