@@ -16,7 +16,7 @@ interface Props {
 }
 
 const Nav: React.FC<Props> = ({ toggleTheme }) => {
-  const menus = ['Home', 'Portfolio', 'Skills', 'About me']
+  const menus = ['Home', 'Skills', 'About me']
 
   const { colors, title } = useContext(ThemeContext)
 
