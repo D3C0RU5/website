@@ -1,12 +1,4 @@
-import {
-  Avatar,
-  Brand,
-  Button,
-  Container,
-  Menu,
-  MenuItem,
-  Navbar,
-} from './styles'
+import { Avatar, Brand, MenuItem, Navbar } from './styles'
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
 import { useContext } from 'react'
@@ -21,17 +13,18 @@ const Nav: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext)
 
   return (
-    <Navbar>
-      <Container>
+    <Navbar
+      className={
+        'navbar navbar-expand-lg ' +
+        (title === 'light' ? 'navbar-light' : 'navbar-dark')
+      }
+    >
+      <div className="container-fluid">
         <Brand>
-          <Avatar src="https://avatars.githubusercontent.com/u/55204235" />
-          Carlos Henrique
+          <Avatar src="/images/personal.jpg" />
+          Carlos Pedrada
         </Brand>
-        <Menu>
-          {menus.map((m, i) => (
-            <MenuItem key={i}>{m}</MenuItem>
-          ))}
-          <Button>Let&apos;s talk!</Button>
+        <div className="d-flex align-items-center justify-content-center gap-2 order-lg-2">
           <Switch
             onChange={toggleTheme}
             checked={title === 'dark'}
@@ -61,8 +54,31 @@ const Nav: React.FC<Props> = ({ toggleTheme }) => {
             onHandleColor="#fff"
             offHandleColor="#25283D"
           />
-        </Menu>
-      </Container>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul className="navbar-nav">
+            {menus.map((item, key) => (
+              <MenuItem key={key} className="nav-item">
+                {item}
+              </MenuItem>
+            ))}
+          </ul>
+        </div>
+      </div>
     </Navbar>
   )
 }

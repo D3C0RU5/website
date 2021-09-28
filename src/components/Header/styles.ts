@@ -6,6 +6,7 @@ export const Banner = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   gap: 30px;
+  margin-top: 60px;
 
   position: relative;
 
@@ -23,10 +24,23 @@ export const Banner = styled.div`
 export const Ballon = styled.div`
   font-size: 2rem;
   z-index: 1;
+  @media (max-width: 767px) {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50%;
+    width: 100%;
+  }
 `
 export const ImageCircle = styled.img`
   width: 350px;
   border-radius: 100%;
   z-index: 1;
   max-width: 100%;
+
+  @media (max-width: 767px) {
+    width: 200px;
+    margin: auto;
+  }
 `
