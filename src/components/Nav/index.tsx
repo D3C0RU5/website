@@ -45,7 +45,7 @@ const Nav: React.FC<Props> = ({ toggleTheme }) => {
               </svg>
             }
             uncheckedIcon={
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-13 -1 40 25">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -1 40 30">
                 <rect fill="none" height="24" width="24"></rect>
                 <path
                   fill="#fff"

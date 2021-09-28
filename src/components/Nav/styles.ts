@@ -1,12 +1,14 @@
 import styled from 'styled-components'
-import { shade } from 'polished'
+import { shade, opacify } from 'polished'
 
 export const Navbar = styled.div`
   height: 60px;
   background: ${(props) => props.theme.colors.background};
   padding: 0 30px;
   display: flex;
-  box-shadow: 0px 1px 4px ${(props) => props.theme.colors.backgroundshadow};
+  box-shadow: 0px 1px 4px ${opacify(-0.9, '#000')};
+  position: relative;
+  z-index: 1;
 `
 export const Container = styled.div`
   max-width: 1050px;

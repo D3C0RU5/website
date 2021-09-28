@@ -3,7 +3,6 @@ import { transparentize } from 'polished'
 
 export const Banner = styled.div`
   min-height: calc(100vh - 60px);
-  background: url('images/programming.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   gap: 30px;
@@ -11,7 +10,7 @@ export const Banner = styled.div`
   position: relative;
 
   &:before {
-    content: '';
+    //content: '';
     position: absolute;
     top: 0;
     right: 0;
