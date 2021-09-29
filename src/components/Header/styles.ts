@@ -29,7 +29,7 @@ export const Ballon = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 50%;
+    min-height: 100%;
     width: 100%;
   }
 `
@@ -41,6 +41,5 @@ export const ImageCircle = styled.img`
 
   @media (max-width: 767px) {
     width: 200px;
-    margin: auto;
   }
 `
