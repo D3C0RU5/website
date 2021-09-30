@@ -13,7 +13,7 @@ const Nav: React.FC = () => {
           <div className="col col-12 col-md-6 text-end d-flex align-items-center justify-content-end p-3">
             <Ballon className="align-items-end align-md-end">
               <div>
-                <div className="fs-5 text-secondary">Hello world!</div>
+                <div className="fs-5 text-secondary">Hello, world!</div>
                 <div className="fs-3 fw-bolder" style={{ color: colors.text }}>
                   Carlos Pedrada
                 </div>

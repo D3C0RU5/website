@@ -19,7 +19,7 @@ const Nav: React.FC<Props> = ({ toggleTheme }) => {
         (title === 'light' ? 'navbar-light' : 'navbar-dark')
       }
     >
-      <div className="container-fluid">
+      <div className="container">
         <Brand>
           <Avatar src="/images/personal.jpg" />
           Carlos Pedrada
