@@ -32,6 +32,13 @@ export const MenuItem = styled.li`
   font-weight: 400;
   padding: 5px 10px;
 
+  @media (max-width: 767px) {
+    & + * {
+      border-top: 1px solid
+        ${(props) => opacify(-0.8, props.theme.colors.subtext)};
+    }
+  }
+
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }

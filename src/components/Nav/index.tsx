@@ -72,7 +72,11 @@ const Nav: React.FC<Props> = ({ toggleTheme }) => {
         >
           <ul className="navbar-nav">
             {menus.map((item, key) => (
-              <MenuItem key={key} className="nav-item">
+              <MenuItem
+                key={key}
+                className="nav-item"
+                onClick={() => alert('Em breve')}
+              >
                 {item}
               </MenuItem>
             ))}

@@ -2,11 +2,11 @@ import styled from 'styled-components'
 import { transparentize } from 'polished'
 
 export const Banner = styled.div`
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 56px);
   background-repeat: no-repeat;
   background-size: cover;
   gap: 30px;
-  margin-top: 60px;
+  margin-top: 56px;
 
   position: relative;
 
