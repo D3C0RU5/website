@@ -21,7 +21,7 @@ const Nav: React.FC<Props> = ({ toggleTheme }) => {
     >
       <div className="container">
         <Brand>
-          <Avatar src="/images/personal.jpg" />
+          <Avatar src="/images/personal.png" />
           Carlos Pedrada
         </Brand>
         <div className="d-flex align-items-center justify-content-center gap-2 order-lg-2">

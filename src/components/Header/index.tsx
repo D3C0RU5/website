@@ -33,7 +33,7 @@ const Nav: React.FC = () => {
             </Ballon>
           </div>
           <div className="col col-12 col-md-6 d-flex align-items-start align-items-md-center justify-content-center justify-content-md-start p-3">
-            <ImageCircle src="images/personal.jpg" />
+            <ImageCircle src="images/personal.png" />
           </div>
         </div>
       </div>
