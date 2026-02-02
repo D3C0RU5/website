@@ -4,8 +4,9 @@ import Master from '../src/infra/Master'
 import Header from '../src/components/Header'
 import Skills from '../src/components/Skills'
 
+type ThemeType = 'light' | 'dark'
 interface Props {
-  theme?: string
+  theme?: ThemeType
 }
 
 const Home: React.FC<Props> = (props) => {

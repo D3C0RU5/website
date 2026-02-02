@@ -1,37 +1,40 @@
-import { ThemeProvider } from 'styled-components'
-import { ReactNode, useState } from 'react'
-
+import React, { ReactNode, useState, useCallback } from 'react'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
 import { setCookie } from 'nookies'
+
 import { dark } from '../../styles/themes/dark'
 import { light } from '../../styles/themes/light'
 import Nav from '../../components/Nav'
 import GlobalStyle from '../../styles/globals'
 
-interface Props {
-  theme: string
+interface MasterProps {
+  theme: 'light' | 'dark'
   children: ReactNode
 }
-interface MasterProps {
-  theme: string
-}
 
-const Master: React.FC<MasterProps> = (props: Props) => {
-  const [theme, setTheme] = useState(() =>
-    props.theme === 'light' ? dark : light
+const Master = ({ theme: initialTheme, children }: MasterProps) => {
+  const [theme, setTheme] = useState<DefaultTheme>(
+    initialTheme === 'light' ? light : dark
   )
 
-  const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light)
-    setCookie(null, 'theme', theme.title, {
-      maxAge: 86400 * 7,
-      path: '/',
+  const toggleTheme = useCallback(() => {
+    setTheme((prev) => {
+      const nextTheme = prev.title === 'light' ? dark : light
+
+      setCookie(null, 'theme', nextTheme.title, {
+        maxAge: 60 * 60 * 24 * 7,
+        path: '/',
+      })
+
+      return nextTheme
     })
-  }
+  }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <Nav toggleTheme={toggleTheme} />
       <GlobalStyle />
-      {props.children}
+      {children}
     </ThemeProvider>
   )
 }

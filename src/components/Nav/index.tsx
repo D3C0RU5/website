@@ -1,7 +1,6 @@
 import { Avatar, Brand, MenuItem, Navbar } from './styles'
 import Switch from 'react-switch'
-import { ThemeContext } from 'styled-components'
-import { useContext } from 'react'
+import { useTheme } from 'styled-components'
 
 interface Props {
   toggleTheme(): void
@@ -10,7 +9,7 @@ interface Props {
 const Nav: React.FC<Props> = ({ toggleTheme }) => {
   const menus = ['Home', 'Portfolio', 'Skills', 'About me']
 
-  const { colors, title } = useContext(ThemeContext)
+  const { colors, title } = useTheme()
 
   return (
     <Navbar

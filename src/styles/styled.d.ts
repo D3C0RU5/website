@@ -7,7 +7,7 @@ interface IPalette {
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    title: string
+    title: 'light' | 'dark'
     colors: {
       primary: string
       secondary: string

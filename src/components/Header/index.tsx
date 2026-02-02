@@ -1,10 +1,9 @@
-import { useContext } from 'react'
-import { ThemeContext } from 'styled-components'
+import { useTheme } from 'styled-components'
 import Wallpaper from '../Background'
 import { Ballon, Banner, ImageCircle } from './styles'
 
-const Nav: React.FC = () => {
-  const { colors } = useContext(ThemeContext)
+const Nav = () => {
+  const { colors } = useTheme()
   return (
     <Banner>
       <Wallpaper></Wallpaper>

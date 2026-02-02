@@ -34,7 +34,7 @@ export const Ballon = styled.div`
   }
 `
 export const ImageCircle = styled.img`
-  width: 350px;
+  width: 260px;
   border-radius: 100%;
   z-index: 1;
   max-width: 100%;
